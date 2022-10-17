@@ -19,6 +19,10 @@ namespace CompAndDel
             IFilter Filtro1=new FilterGreyscale();
 
             PipeSerial Pipe1=new PipeSerial(Filtro1,Pipe2);
+
+            IPicture image=Pipe1.Send(picture);
+
+            provider.SavePicture(image, @"Imagen_Editada.jpg");
         }
     }
 }
