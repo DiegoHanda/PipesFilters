@@ -6,7 +6,7 @@ namespace CompAndDel
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] args)//Hay que hacer una nueva clase filtro que lo unico que haga es guardar la imagen despues de un paso, e implementarla despues de cada filtro
         {
             PictureProvider provider = new PictureProvider();
             IPicture picture = provider.GetPicture(@"luke.jpg");
