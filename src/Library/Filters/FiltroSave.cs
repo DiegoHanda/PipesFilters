@@ -1,5 +1,6 @@
 using System;
 using System.Drawing;
+using TwitterUCU;
 
 namespace CompAndDel.Filters
 {
@@ -15,6 +16,8 @@ namespace CompAndDel.Filters
         {
             IPicture result = image.Clone();
             provider.SavePicture(image, @$"Imagen_Editada{this.numero}.jpg");
+            var twitter = new TwitterImage();
+            Console.WriteLine(twitter.PublishToTwitter("team 18", @$"Imagen_Editada{this.numero}.jpg"));
             return result;
         }
     }
